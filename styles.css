@@ -1,0 +1,255 @@
+:root {
+    --site-width: 1280px;
+
+    --font-main: "proxima-nova", sans-serif;
+    --font-heading: "Apostil", sans-serif;
+
+    --sage: rgb(113, 156, 113);
+    --forest: rgb(12, 42, 12);
+    --focus-color: #32416d;
+    --required-color: #d00;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--forest);
+    background-color: var(--sage);
+    opacity: 0.8;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #96b994 10px ), repeating-linear-gradient( #60846955, #608469 );
+}
+
+header {
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 a {
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--forest);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--forest);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--focus-color);
+}
+
+.home nav a[href="index.html"],
+.contact nav a[href="contact.html"] {
+    border-bottom: 2px solid rgb(18, 69, 18);
+}
+
+main > img:first-of-type {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 3rem;
+}
+
+.contact-hero {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 3rem;
+}
+
+main > h2 {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+main > p {
+    width: 75%;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+    max-width: 900px;
+    font-family: var(--font-main);
+}
+
+section {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    align-items: flex-start;
+}
+
+section img {
+    width: 55%;
+    height: auto;
+    border-radius: 3px;
+}
+
+section .text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 45%;
+}
+
+section .text-block h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+section .text-block p {
+    line-height: 1.6;
+}
+
+footer {
+    width: 100%;
+    max-width: none;
+    margin: 0;                 
+    background: var(--forest);
+    padding: 3rem 0;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+footer p {
+    color: var(--sage);
+    font-size: 1rem;
+}
+
+.contact main section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+main section {
+    width: var(--site-width);
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+main section h2 {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+main section > p {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto 3rem auto;
+    font-size: 1rem;
+}
+
+.required {
+    color: #d00;
+    font-weight: bold;
+}
+.contact-image {
+    width: 100%;
+    height: auto;
+}
+
+.grid-container {
+    display: grid;
+}
+
+form {
+    max-width: fit-content;
+    width: 60%;
+    margin: 0 auto 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: 1rem;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    font-family: var(--font-main);
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    background-color: #f8faff;
+}
+
+input:invalid,
+textarea:invalid {
+    border-color: #d11;
+    background-color: #ffecec;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0;
+}
+
+legend {
+    font-weight: bold;
+    font-family: var(--font-main);
+    margin-bottom: 0.5rem;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background: rgb(18, 70, 18);
+    color: #fff;
+    padding: 0.9rem;
+    border: none;
+    font-size: 1.1rem;
+    font-family: var(--font-main);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+    background: var(--focus-color);
+}
+
+button[type="submit"]:focus {
+    outline: 3px solid #aac1f2;
+}
